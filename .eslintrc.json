@@ -1,3 +1,84 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "unused-imports"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "import/no-extraneous-dependencies": [
+      0
+    ],
+    "@typescript-eslint/no-unused-vars": 0,
+    "unused-imports/no-unused-imports": "error",
+    "no-unused-expressions": [
+      "error"
+    ],
+    "no-undef": [
+      "error"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      "warn"
+    ],
+    "prettier/prettier": "warn",
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "no-nested-ternary": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
+    "camelcase": 0,
+    "jsx-a11y/media-has-caption": 0,
+    "react-hooks/exhaustive-deps": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }
