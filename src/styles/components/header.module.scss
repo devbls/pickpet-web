@@ -1,0 +1,42 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: #f25f70;
+
+    a {
+      color: #FFF;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: color 0.2s;
+
+      & + a {
+        margin-left: 1.5rem;
+      }
+
+      &:hover {
+        color: #404040;
+      }
+    }
+
+    .itemDivider {
+      width: 6px;
+      height: 6px;
+      background: #FFF;
+      border-radius: 6px;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.logoContainer {
+  padding: 3rem;
+  cursor: pointer;
+}
